@@ -1,0 +1,20 @@
+#container {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #237063;
+    width: 1200px;
+    margin: auto;
+}
+header {
+    text-align: center;
+}
+section > div {
+    margin-bottom: 50px;
+    padding: 20px;
+    
+}
+fieldset {
+    border: 3px dashed #237063;
+}
+.leftExp span {
+    display: block;
+}
