@@ -26,20 +26,20 @@ header {
     width: 50px;
     height: 50px;
     position: relative;
-    animation: jumper 6s 4s forwards ;
+    animation: jumper 6s 3s forwards ;
      
 }
 .hRight {
     width: 50%;
-    text-align: center;
+    position: relative;
 }
 h1 {
-    position: relative;
-    animation: fade1 4s 1s forwards;
+    position: absolute;
+    animation: fade1 2s 1s forwards;
 }
 h2 {
-    position: relative;
-    animation: fade2 4s 1s forwards;
+    position: absolute;
+    animation: fade2 2s 1s forwards;
 }
 section {
     margin:20px;
@@ -201,20 +201,24 @@ label {
     @keyframes fade1 {
     0% {
         top: 0;
+        right: 0;
         font-size: 10px;
     }
     100% {
-        top: 20px;
+        top: 10%;
+        right: 20%;
         font-size: 36px;
     }
     }
     @keyframes fade2 {
         0% {
             bottom: 0;
+            right: 0;
             font-size: 14px;
         }
         100% {
-            bottom: 10px;
+            bottom: 10%;
+            right: 25%;
             font-size: 28px;
         }
     }
