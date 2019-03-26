@@ -1,14 +1,48 @@
 #container {
-    font-family: Arial, Helvetica, sans-serif;
-    color: #237063;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 18px;
+    background-image: radial-gradient(#d9f0df 70%, #b0eeb4);
+    
+}
+main {
     width: 900px;
+    position: relative;
     margin: auto;
+    color: #237063;
+    background-color: #a7facc;
+    box-sizing: border-box;
+    animation: entrance 1s;
 }
 header {
+    height: 150px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+}
+.hLeft {
+    width: 50%;
+}
+.profile {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    animation: jumper 6s 4s forwards ;
+     
+}
+.hRight {
+    width: 50%;
     text-align: center;
 }
+h1 {
+    position: relative;
+    animation: fade1 4s 1s forwards;
+}
+h2 {
+    position: relative;
+    animation: fade2 4s 1s forwards;
+}
 section {
-    box-sizing: border-box;
+    margin:20px;
 }
 fieldset {
     margin-bottom: 50px;
@@ -33,22 +67,19 @@ legend {
     display: block;
 }
 .skills{
-    width: 100%;
-    display: table;
+    display: flex;
+    flex-wrap: wrap;
 }
-.row {
-    display: table-row;
-}
-.row div {
-    display: table-cell;
+.skills div {
     width: 20%;
-    height: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 img {
     width: 25px;
     height: 25px;
-    vertical-align: middle;
 }
 label {
     border: 1px solid #237063;
@@ -56,3 +87,134 @@ label {
 }
 
 
+@keyframes entrance {
+    5% {
+        transform: rotate(18deg); 
+        zoom: 0.05;
+    }
+    10% {
+        transform: rotate(36deg);   
+        zoom: 0.1;
+    }
+    15% {
+        transform: rotate(54deg);
+        zoom: 0.15;
+    }
+    20% {
+        transform: rotate(72deg); 
+        zoom: 0.2;   
+    }
+    25% {
+        transform: rotate(90deg);
+        zoom: 0.25;
+    }
+    30% {
+        transform: rotate(108deg);
+        zoom: 0.3;
+    }
+    35% {
+        transform: rotate(126deg);
+        zoom: 0.35;
+    }
+    40% {
+        transform: rotate(144deg);
+        zoom: 0.4;
+    }
+    45% {
+        transform: rotate(162deg);
+        zoom: 0.45;
+    }
+    50% {
+        transform: rotate(180deg);
+        zoom: 0.5;
+    }
+    55% {
+        transform: rotate(198deg);
+        zoom: 0.55;
+    }
+    60% {
+        transform: rotate(216deg);
+        zoom: 0.6;
+    }
+    65% {
+        transform: rotate(234deg);
+        zoom: 0.65;
+    }
+    70% {
+        transform: rotate(252deg);
+        zoom: 0.7;
+    }
+    75% {
+        transform: rotate(270deg);
+        zoom: 0.75;
+    }
+    80% {
+        transform: rotate(288deg);
+        zoom: 0.8;
+    }
+    85% {
+        transform: rotate(306deg);
+        zoom: 0.85;
+    }
+    90% {
+        transform: rotate(324deg);
+        zoom: 0.9;
+    }
+    95% {
+        transform: rotate(342deg);
+        zoom: 0.95;
+    }
+    100% {
+        transform: rotate(360deg);
+        zoom: 1;
+    }
+
+}
+
+@keyframes jumper{
+
+    5% {
+        transform: translate(50px, 30px);
+    }
+    30%{
+        transform: translate(80px, 10px);
+    }
+    34% {
+        
+        transform: translate(100px, 60px);
+    }
+    38% {
+        transform: translate(140px, 25px);
+    }
+    44% {
+        transform: translate(180px, 100px);
+    }
+    70% {
+       transform: translate(220px, 40px);
+    }
+    100% {
+        transform: translate(220px, 40px);
+        width: 75px;
+        height: 75px;
+     }
+    }
+    @keyframes fade1 {
+    0% {
+        top: 0;
+        font-size: 10px;
+    }
+    100% {
+        top: 20px;
+        font-size: 36px;
+    }
+    }
+    @keyframes fade2 {
+        0% {
+            bottom: 0;
+            font-size: 14px;
+        }
+        100% {
+            bottom: 10px;
+            font-size: 28px;
+        }
+    }
