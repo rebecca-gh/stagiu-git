@@ -26,7 +26,7 @@ header {
     width: 50px;
     height: 50px;
     position: relative;
-    animation: jumper 6s 3s forwards ;
+    animation: jumper 6s 3s forwards;
      
 }
 .hRight {
@@ -48,6 +48,10 @@ fieldset {
     margin-bottom: 50px;
     padding: 20px;
     border: 3px dashed #237063;
+    position: relative;
+}
+fieldset:hover {
+    transform: translate3d(20px, 20px, 40px);
 }
 legend {
     padding: 0 10px 0 10px;
@@ -76,7 +80,38 @@ legend {
     display: flex;
     align-items: center;
 }
-
+.tooltip {
+    width: 130px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    color: #000000;
+    visibility: hidden;
+}
+.skills div:hover .tooltip {
+    visibility: visible;
+}
+#css:hover::after {
+    content:"I hate CSS, \A I hate CSS, \A I hate CSS... \A It's working! \A I love CSS! 🍾";
+    white-space: pre;
+    width: 130px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff;
+    color: #000000;
+}
 img {
     width: 25px;
     height: 25px;
