@@ -27,7 +27,8 @@ header {
     text-align: center;
     font-weight: bold;
 }
-.span_info {
+.header_info:after {
+    content: attr(text);
     display: block;
     font-style: italic;
 }
@@ -81,18 +82,17 @@ section {
 #details_nd {
     height: 50%;
 }
+.experience {
+    display: flex;
+    
+}
 .left {
     width: 30%;
-    float: left;
-    clear: both;
 }
 .right {
     width: 70%;
-    float: right;
 }
-.left > span {
-    display: block;
-}
+
 .title {
     height: 20px;
     margin-bottom: 10px;
