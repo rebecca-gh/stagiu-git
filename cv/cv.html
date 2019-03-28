@@ -1,41 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>CV Rebeca Busuioc</title>
-        <link rel='stylesheet' href='style.css'>
+        <title>Resume</title>
         <link href="https://fonts.googleapis.com/css?family=Quicksand"
             rel="stylesheet">
+        <link rel='stylesheet' href='newStyle.css'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     </head>
-    <body id='container'>
+    <body>
         <main>
             <header>
-                <div class=hRight>
-                    <h1>Rebeca Busuioc</h1>
-                    <h2><i>Jr web developer</i></h2>
-                </div>
-                <div class='hLeft'>
-                    <img src='media/WebDevIcon.png' alt='profile photo'
-                        class='profile'>
+                <div class='header_title'>RESUME</div>
+                <div class='header_info'>REBECA BUSUIOC
+                    <span class='span_info'>Jr web developer</span>
                 </div>
             </header>
+            <aside>
+                <div>
+                    <span class='bigSpan'>Name</span>
+                    <span class='smallSpan'>Rebeca Busuioc</span>
+                </div>
+                <div>
+                    <span class='bigSpan'>Date of birth</span>
+                    <span class='smallSpan'>06/11/1990</span>
+                </div>
+                <div>
+                    <span class='bigSpan'>Address</span>
+                    <span class='smallSpan'>my_address</span>
+                </div>
+                <div>
+                    <span class='bigSpan'>Phone</span>
+                    <span class='smallSpan'>0749 37 99 52</span>
+                </div>
+                <div>
+                    <span class='bigSpan'>Email</span>
+                    <span class='smallSpan'>rebeca.busuioc1@gmail.com</span>
+                </div>
+            </aside>
             <section>
-                <fieldset>
-                    <legend><b>About me</b></legend>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book. It has survived not only five centuries,
-                    but also the leap into electronic typesetting, remaining
-                    essentially unchanged. It was popularised in the 1960s with
-                    the release of Letraset sheets containing Lorem Ipsum
-                    passages, and more recently with desktop publishing software
-                    like Aldus PageMaker including versions of Lorem Ipsum.
-                </fieldset>
-                <fieldset>
-                    <legend><b>Work experience</b></legend>
-                    <div class='half'>
+                <div class='details' id='details_st'>
+                    <div class='title'>About me</div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the
+                        industry's
+                        standard dummy text ever since the 1500s, when an
+                        unknown
+                        printer took a galley of type and scrambled it to make a
+                        type specimen book. It has survived not only five
+                        centuries,
+                        but also the leap into electronic typesetting, remaining
+                        essentially unchanged. It was popularised in the 1960s
+                        with
+                        the release of Letraset sheets containing Lorem Ipsum
+                        passages, and more recently with desktop publishing
+                        software
+                        like Aldus PageMaker including versions of Lorem Ipsum</p>
+                </div>
+                <div class='details' id='details_nd'>
+                    <div class='title'>Work experience</div>
+                    <div>
                         <span class='left'>
                             <span>Web developer</span>
                             <span>Company Y</span>
@@ -56,10 +79,9 @@
                             essentially unchanged.
                         </span>
                     </div>
-                    <br>
                     <div>
                         <span class='left'>
-                            <span>Jr web developer</span>
+                            <span>Web developer</span>
                             <span>Company X</span>
                             <span>start_date - end_date</span>
                         </span>
@@ -76,55 +98,60 @@
                             but also the leap into electronic typesetting,
                             remaining
                             essentially unchanged.
-                        </div>
-                    </fieldset>
-                </div>
-                <fieldset>
-                    <legend><b>Skills</b></legend>
-                    <div class='skills'>
-                        <div>
-                            <img
-                                src='media/js.png' alt='js img'>
-                            <label>Javascript</label>
-                            <span class='tooltip'>Wanted! 😍 Loading...</span>
-                        </div>
-                        <div>
-                            <img
-                                src='media/html.png' alt='html
-                                img'>
-                            <label>HTML</label>
-                            <span class='tooltip'>I know you! 😉</span>
-                        </div>
-                        <div id='css'>
-                            <img src='media/css.png' alt='css img'>
-                            <label>CSS</label>
-                        </div>
-                        <div>
-                            <img src='media/react.png'
-                                alt='react
-                                img'>
-                            <label>React</label>
-                            <span class='tooltip'>I'll get you! 🧐</span>
-                        </div>
-                        <div><img src='media/node.png'
-                                alt='node
-                                img'>
-                            <label>Node</label>
-                            <span class='tooltip'>??😳😨...??</span>
-                        </div>
-                        <div><img src='media/aws.png' alt='aws img'>
-                            <label>AWS</label>
-                            <span class='tooltip'>👽</span>
-                        </div>
-                        <div><img
-                                src='media/mongo.png' alt='mongo
-                                img'>
-                            <label>MongoDB</label>
-                            <span class='tooltip'>I know how to read you! 😀</span>
-                        </div>
+                        </span>
                     </div>
-                </fieldset>
-            </section>
-        </main>
-    </body>
-</html>
+                </div>
+                <div class='details' id='details_rd'>
+                    <div class='title'>Skills</div>
+                    <div class='skill'>
+                        <img
+                            src='media/js.png' alt='js img'>
+                        <label>Javascript</label>
+                        <span class='tooltip'>Wanted! 😍 Loading...</span>
+                    </div>
+                    <div class='skill'>
+                        <img
+                            src='media/html.png' alt='html
+                            img'>
+                        <label>HTML</label>
+                        <span class='tooltip'>I know you! 😉</span>
+                    </div>
+                    <div class='skill' id='css'>
+                        <img src='media/css.png' alt='css img'>
+                        <label>CSS</label>
+                    </div>
+                    <div class='skill'>
+                        <img src='media/react.png'
+                            alt='react
+                            img'>
+                        <label>React</label>
+                        <span class='tooltip'>I'll get you! 🧐</span>
+                    </div>
+                    <div class='skill'>
+                        <img src='media/node.png'
+                            alt='node
+                            img'>
+                        <label>Node</label>
+                        <span class='tooltip'>??😳😨...??</span>
+                    </div>
+                    <div class='skill'>
+                        <img src='media/aws.png' alt='aws img'>
+                        <label>AWS</label>
+                        <span class='tooltip'>👽</span>
+                    </div>
+                    <div class='skill'>
+                        <img
+                            src='media/mongo.png' alt='mongo
+                            img'>
+                        <label>MongoDB</label>
+                        <span class='tooltip'>I know how to read you! 😀</span>
+                    </div>
+                </section>
+                <footer>
+                    <div class='footer_details'><p>some text</p></div>
+                    <div class='footer_details'><p>some text</p></div>
+                    <div class='footer_details'><p>some text</p></div>
+                </footer>
+            </main>
+        </body>
+    </html>

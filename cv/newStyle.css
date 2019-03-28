@@ -1,67 +1,82 @@
-#container {
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    background-image: radial-gradient(#d9f0df 70%, #b0eeb4);
-    
-}
 main {
     width: 900px;
-    position: relative;
-    margin: auto;
-    color: #237063;
-    background-color: #a7facc;
+    margin: 0 auto;
     box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
     animation: entrance 1s;
 }
+
 header {
-    height: 150px;
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 20px;
+    width: 30%;
+    height: 90px;
+    box-sizing: inherit;
 }
-.hLeft {
-    width: 50%;
+.header_title {
+    height: 50%;
+    color: #f0f8ff;
+    background-color: #53d2d9;
+    box-sizing: inherit;
+    padding: 15px 0 5px 10px;
 }
-.profile {
-    width: 50px;
-    height: 50px;
-    position: relative;
-    animation: jumper 6s 3s forwards;
-     
+.header_info {
+    height: 50%;
+    background-color: #f0f8ff;
+    color: #000000;
+    box-sizing: inherit;
+    text-align: center;
+    font-weight: bold;
 }
-.hRight {
-    width: 50%;
-    position: relative;
+.span_info {
+    display: block;
+    font-style: italic;
 }
-h1 {
-    position: absolute;
-    animation: fade1 2s 1s forwards;
+aside {
+    width: 30%;
+    height: 600px;
+    box-sizing: inherit;
+    background-color: #53d2d9;
+    color: #f0f8ff;
+    padding-left: 10px;
+    float: left;
+    margin-bottom: 30px;
 }
-h2 {
-    position: absolute;
-    animation: fade2 2s 1s forwards;
+aside > div {
+    height: 20%;
+    box-sizing: inherit;
+    padding: 20px 0 0 10px;
+}
+.bigSpan {
+    display: block;
+}
+.smallSpan {
+    color: #1f9fa7;
 }
 section {
-    margin:20px;
+    width: 600px;
+    height: 800px;
+    float: right;
+    box-sizing: inherit;
+    padding: 5px;
+    background-color: #f0f8ff;
 }
-fieldset {
-    margin-bottom: 50px;
-    padding: 20px;
-    border: 3px dashed #237063;
-    position: relative;
+.details {
+    margin-bottom: 20px;
 }
-fieldset:hover {
-    transform: translate3d(20px, 20px, 40px);
+.details:hover {
+    box-shadow: 2px 2px 2px #1f9fa7;
+    transform: scale(1.1);
 }
-legend {
-    padding: 0 10px 0 10px;
+#details_st {
+    height: 30%;
 }
-.half {
-    margin-bottom: 10%;
+#details_nd {
+    height: 50%;
 }
 .left {
     width: 30%;
     float: left;
+    clear: both;
 }
 .right {
     width: 70%;
@@ -70,57 +85,75 @@ legend {
 .left > span {
     display: block;
 }
-.skills{
-    display: flex;
-    flex-wrap: wrap;
+.title {
+    height: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #53d2d9;
+    font-weight:bold;
 }
-.skills div {
+.skill {
     width: 20%;
-    height: 40px;
-    display: flex;
-    align-items: center;
+    height: 28px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.skill > img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+label {
+    vertical-align: middle;
+    border: 1px solid #1f9fa7;
+    padding: 5px;
+    box-sizing: border-box;
 }
 .tooltip {
-    width: 130px;
+    width: 100px;
     height: auto;
-    padding: 10px;
+    padding: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 14px;
     border: 1px solid #000000;
     border-radius: 30%;
-    position: relative;
+    position: absolute;;
     z-index: 1;
     background-color: #ffffff;
     color: #000000;
     visibility: hidden;
 }
-.skills div:hover .tooltip {
+.skill:hover .tooltip {
     visibility: visible;
 }
 #css:hover::after {
     content:"I hate CSS, \A I hate CSS, \A I hate CSS... \A It's working! \A I love CSS! 🍾";
     white-space: pre;
-    width: 130px;
+    width: 100px;
     height: auto;
     padding: 10px;
     text-align: center;
     font-size: 16px;
     border: 1px solid #000000;
     border-radius: 30%;
-    position: relative;
+    position: absolute;
     z-index: 1;
     background-color: #ffffff;
     color: #000000;
 }
-img {
-    width: 25px;
-    height: 25px;
+footer {
+    clear: both;
+    background-color: #53d2d9;
+    color: #f0f8ff;
+    height: 70px;
 }
-label {
-    border: 1px solid #237063;
-    padding: 5px;
+.footer_details {
+    width: 33%;
+    height: inherit;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
 }
-
 
 @keyframes entrance {
     5% {
@@ -205,55 +238,3 @@ label {
     }
 
 }
-
-@keyframes jumper{
-
-    5% {
-        transform: translate(50px, 30px);
-    }
-    30%{
-        transform: translate(80px, 10px);
-    }
-    34% {
-        
-        transform: translate(100px, 60px);
-    }
-    38% {
-        transform: translate(140px, 25px);
-    }
-    44% {
-        transform: translate(180px, 100px);
-    }
-    70% {
-       transform: translate(220px, 40px);
-    }
-    100% {
-        transform: translate(220px, 40px);
-        width: 75px;
-        height: 75px;
-     }
-    }
-    @keyframes fade1 {
-    0% {
-        top: 0;
-        right: 0;
-        font-size: 10px;
-    }
-    100% {
-        top: 10%;
-        right: 20%;
-        font-size: 36px;
-    }
-    }
-    @keyframes fade2 {
-        0% {
-            bottom: 0;
-            right: 0;
-            font-size: 14px;
-        }
-        100% {
-            bottom: 10%;
-            right: 25%;
-            font-size: 28px;
-        }
-    }
