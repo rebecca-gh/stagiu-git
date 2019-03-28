@@ -46,6 +46,11 @@ aside > div {
     box-sizing: inherit;
     padding: 20px 0 0 10px;
 }
+aside:hover div{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px #f0f8ff;
+  }
 .bigSpan {
     display: block;
 }
@@ -57,15 +62,18 @@ section {
     height: 800px;
     float: right;
     box-sizing: inherit;
-    padding: 5px;
+    padding: 10px;
     background-color: #f0f8ff;
 }
 .details {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .details:hover {
-    box-shadow: 2px 2px 2px #1f9fa7;
+    box-shadow: 3px 3px 5px #1f9fa7;
     transform: scale(1.1);
+    background-color: #53d2d9;
+    transition: 0.5s all;
+
 }
 #details_st {
     height: 30%;
@@ -95,7 +103,7 @@ section {
     width: 20%;
     height: 28px;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
 .skill > img {
     vertical-align: middle;
@@ -118,7 +126,7 @@ label {
     border-radius: 30%;
     position: absolute;;
     z-index: 1;
-    background-color: #ffffff;
+    background-color: #f0f8ff;
     color: #000000;
     visibility: hidden;
 }
@@ -137,22 +145,29 @@ label {
     border-radius: 30%;
     position: absolute;
     z-index: 1;
-    background-color: #ffffff;
+    background-color: #f0f8ff;
     color: #000000;
 }
 footer {
     clear: both;
-    background-color: #53d2d9;
+    
     color: #f0f8ff;
     height: 70px;
 }
 .footer_details {
-    width: 33%;
+    width: 33.33%;
     height: inherit;
-    display: inline-block;
+    float: left;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
+    background-color: #53d2d9;
+}
+.footer_details:hover {
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px #1f9fa7;
+    transition-duration: 0.5s;
+    transition-property: all;
 }
 
 @keyframes entrance {
