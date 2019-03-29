@@ -52,15 +52,13 @@ aside:hover div{
     transition: 0.5s;
     box-shadow: 2px 2px 2px #f0f8ff;
   }
-.bigSpan {
-    display: block;
-}
-.smallSpan {
-    color: #1f9fa7;
-}
+ aside > div span:after {
+      content: attr(text);
+      color: #000000;
+      display: block;
+  }
 section {
     width: 600px;
-    height: 800px;
     float: right;
     box-sizing: inherit;
     padding: 10px;
@@ -68,6 +66,17 @@ section {
 }
 .details {
     margin-bottom: 15px;
+    
+}
+.details:before {
+    content: attr(text);
+    height: 20px;
+    font-weight:bold;
+    
+}
+hr {
+    margin-top: 0;
+    border-top: 2px solid #53d2d9;
 }
 .details:hover {
     box-shadow: 3px 3px 5px #1f9fa7;
@@ -76,34 +85,50 @@ section {
     transition: 0.5s all;
 
 }
-#details_st {
-    height: 30%;
-}
-#details_nd {
-    height: 50%;
+.details p {
+    margin-top: 10px;
 }
 .experience {
     display: flex;
-    
+    margin-bottom: 20px;
 }
-.left {
+.experience_item {
     width: 30%;
 }
-.right {
+.experience_details {
     width: 70%;
+    padding-left: 15px;
 }
+.experience_details p {
+    margin-top: 0;
+}
+.skills_flex {
+    display: flex;
+    flex-wrap: wrap;
 
-.title {
-    height: 20px;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #53d2d9;
-    font-weight:bold;
 }
 .skill {
     width: 20%;
     height: 28px;
-    display: inline-block;
     margin-top: 20px;
+    position: relative;
+}
+.skill:after {
+    content:attr(text);
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    z-index: 1;
+    background-color: #f0f8ff;
+    color: #000000;
+    visibility: hidden;
 }
 .skill > img {
     vertical-align: middle;
@@ -116,21 +141,7 @@ label {
     padding: 5px;
     box-sizing: border-box;
 }
-.tooltip {
-    width: 100px;
-    height: auto;
-    padding: 5px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #000000;
-    border-radius: 30%;
-    position: absolute;;
-    z-index: 1;
-    background-color: #f0f8ff;
-    color: #000000;
-    visibility: hidden;
-}
-.skill:hover .tooltip {
+.skill:hover::after {
     visibility: visible;
 }
 #css:hover::after {
@@ -150,7 +161,6 @@ label {
 }
 footer {
     clear: both;
-    
     color: #f0f8ff;
     height: 70px;
 }

@@ -16,29 +16,24 @@
             </header>
             <aside>
                 <div>
-                    <span class='bigSpan'>Name</span>
-                    <span class='smallSpan'>Rebeca Busuioc</span>
+                    <span text='Rebeca Busuioc'>Name</span>
                 </div>
                 <div>
-                    <span class='bigSpan'>Date of birth</span>
-                    <span class='smallSpan'>06/11/1990</span>
+                    <span text='06/11/1990'>Date of birth</span>
                 </div>
                 <div>
-                    <span class='bigSpan'>Address</span>
-                    <span class='smallSpan'>my_address</span>
+                    <span text='my_addresse'>Address</span>
                 </div>
                 <div>
-                    <span class='bigSpan'>Phone</span>
-                    <span class='smallSpan'>0749 37 99 52</span>
+                    <span text='0749 37 99 52'>Phone</span>
                 </div>
                 <div>
-                    <span class='bigSpan'>Email</span>
-                    <span class='smallSpan'>rebeca.busuioc1@gmail.com</span>
+                    <span text='rebeca.busuioc1@gmail.com'>Email</span>
                 </div>
             </aside>
             <section>
-                <div class='details' id='details_st'>
-                    <span class='title'>About me</span>
+                <div class='details' text='About me'>
+                    <hr>
                     <p>Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
                         industry's
@@ -53,17 +48,18 @@
                         the release of Letraset sheets containing Lorem Ipsum
                         passages, and more recently with desktop publishing
                         software
-                        like Aldus PageMaker including versions of Lorem Ipsum</p>
+                        like Aldus PageMaker including versions of Lorem Ipsum
+                    </p>
                 </div>
-                <div class='details' id='details_nd'>
-                    <span class='title'>Work experience</span>
+                <div class='details' text='Work experience'>
+                    <hr>
                     <div class='experience'>
-                        <div class='left'>
+                        <div class='experience_item'>
                             <span>Web developer</span>
                             <span>Company Y</span>
                             <span>start_date - end_date</span>
                         </div>
-                        <div class='right'>
+                        <div class='experience_details'>
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing
                                 and
@@ -85,12 +81,12 @@
                         </div>
                     </div>
                     <div class='experience'>
-                        <div class='left'>
+                        <div class='experience_item'>
                             <span>Web developer</span>
                             <span>Company X</span>
                             <span>start_date - end_date</span>
                         </div>
-                        <div class='right'>
+                        <div class='experience_details'>
                             <p>
                                 Lorem Ipsum is simply dummy text of the printing
                                 and
@@ -112,57 +108,54 @@
                         </div>
                     </div>
                 </div>
-                <div class='details' id='details_rd'>
-                    <span class='title'>Skills</span>
-                    <div class='skill'>
-                        <img
-                            src='media/js.png' alt='js img'>
-                        <label>Javascript</label>
-                        <span class='tooltip'>Wanted! 😍 Loading...</span>
+                <div class='details' text='Skills'>
+                    <hr>
+                    <div class='skills_flex'>
+                        <div class='skill' text='Wanted! 😍 Loading...'>
+                            <img
+                                src='media/js.png' alt='js img'>
+                            <label>Javascript</label>
+                        </div>
+                        <div class='skill' text='I know you! 😉'>
+                            <img
+                                src='media/html.png' alt='html
+                                img'>
+                            <label>HTML</label>
+                        </div>
+                        <div class='skill' id='css'>
+                            <img src='media/css.png' alt='css img'>
+                            <label>CSS</label>
+                        </div>
+                        <div class='skill' text="I'll get you! 🧐">
+                            <img src='media/react.png'
+                                alt='react
+                                img'>
+                            <label>React</label>
+                        </div>
+                        <div class='skill' text='??😳😨...??'>
+                            <img src='media/node.png'
+                                alt='node
+                                img'>
+                            <label>Node</label>
+                        </div>
+                        <div class='skill' text='👽'>
+                            <img src='media/aws.png' alt='aws img'>
+                            <label>AWS</label>
+                        </div>
+                        <div class='skill' text='I know how to read you! 😀'>
+                            <img
+                                src='media/mongo.png' alt='mongo
+                                img'>
+                            <label>MongoDB</label>
+                        </div>
                     </div>
-                    <div class='skill'>
-                        <img
-                            src='media/html.png' alt='html
-                            img'>
-                        <label>HTML</label>
-                        <span class='tooltip'>I know you! 😉</span>
-                    </div>
-                    <div class='skill' id='css'>
-                        <img src='media/css.png' alt='css img'>
-                        <label>CSS</label>
-                    </div>
-                    <div class='skill'>
-                        <img src='media/react.png'
-                            alt='react
-                            img'>
-                        <label>React</label>
-                        <span class='tooltip'>I'll get you! 🧐</span>
-                    </div>
-                    <div class='skill'>
-                        <img src='media/node.png'
-                            alt='node
-                            img'>
-                        <label>Node</label>
-                        <span class='tooltip'>??😳😨...??</span>
-                    </div>
-                    <div class='skill'>
-                        <img src='media/aws.png' alt='aws img'>
-                        <label>AWS</label>
-                        <span class='tooltip'>👽</span>
-                    </div>
-                    <div class='skill'>
-                        <img
-                            src='media/mongo.png' alt='mongo
-                            img'>
-                        <label>MongoDB</label>
-                        <span class='tooltip'>I know how to read you! 😀</span>
-                    </div>
-                </section>
-                <footer>
-                    <div class='footer_details'><p>some text</p></div>
-                    <div class='footer_details'><p>some text</p></div>
-                    <div class='footer_details'><p>some text</p></div>
-                </footer>
-            </main>
-        </body>
-    </html>
+                </div>
+            </section>
+            <footer>
+                <div class='footer_details'><p>some text</p></div>
+                <div class='footer_details'><p>some text</p></div>
+                <div class='footer_details'><p>some text</p></div>
+            </footer>
+        </main>
+    </body>
+</html>
