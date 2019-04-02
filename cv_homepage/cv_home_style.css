@@ -1,20 +1,168 @@
 #body {
     background-color: #caf5f3;
 }
-main {
+.container-fluid {
     background-color: #f0f8ff;
     max-width: 900px;
     margin: auto;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
+    animation: entrance 1s;
+}
+.container-fluid> .row {
+    margin: auto;
+    padding: 20px 0 20px 0;
+    align-items: center;
+}
+header {
+    text-align: center;
+    margin-bottom: 20px;
 }
 header img {
-width: 150px;
-height: 200px;
-border-radius: 15px 50px;
+    width: 150px;
+    height: 200px;
+    border-radius: 15px 50px;
+    }
+ header img:hover {
+    animation: big 1s forwards;
+}   
+.name {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
 }
-
+.personalInfo:before {
+    content: attr(text);
+    border-bottom: 2px solid #53d2d9;
+}
+.personalDetails {
+    margin-top: 20px;
+}
+.personalDetails:after {
+    content: attr(text);
+    display: block;
+    font-weight: bold;
+}
+section {
+    margin-bottom: 15px;
+}
 a img {
 width: 250px;
 height: 150px;
+transition: border 0.5s;
+}
+figure {
+    text-align: center;
+    color: #000000;
+}
+a img:hover {
+    border: 3px outset #ffffff;
+}
+footer a {
+    color: #000000;
+}
+
+@media all and (max-width: 768px){
+    .centered {
+        text-align: center;
+    }
+}
+@media all and (max-width: 992px){
+    header, aside {
+        text-align: center;
+    }
+}
+@keyframes entrance {
+    5% {
+        transform: rotate(18deg); 
+        zoom: 0.05;
+    }
+    10% {
+        transform: rotate(36deg);   
+        zoom: 0.1;
+    }
+    15% {
+        transform: rotate(54deg);
+        zoom: 0.15;
+    }
+    20% {
+        transform: rotate(72deg); 
+        zoom: 0.2;   
+    }
+    25% {
+        transform: rotate(90deg);
+        zoom: 0.25;
+    }
+    30% {
+        transform: rotate(108deg);
+        zoom: 0.3;
+    }
+    35% {
+        transform: rotate(126deg);
+        zoom: 0.35;
+    }
+    40% {
+        transform: rotate(144deg);
+        zoom: 0.4;
+    }
+    45% {
+        transform: rotate(162deg);
+        zoom: 0.45;
+    }
+    50% {
+        transform: rotate(180deg);
+        zoom: 0.5;
+    }
+    55% {
+        transform: rotate(198deg);
+        zoom: 0.55;
+    }
+    60% {
+        transform: rotate(216deg);
+        zoom: 0.6;
+    }
+    65% {
+        transform: rotate(234deg);
+        zoom: 0.65;
+    }
+    70% {
+        transform: rotate(252deg);
+        zoom: 0.7;
+    }
+    75% {
+        transform: rotate(270deg);
+        zoom: 0.75;
+    }
+    80% {
+        transform: rotate(288deg);
+        zoom: 0.8;
+    }
+    85% {
+        transform: rotate(306deg);
+        zoom: 0.85;
+    }
+    90% {
+        transform: rotate(324deg);
+        zoom: 0.9;
+    }
+    95% {
+        transform: rotate(342deg);
+        zoom: 0.95;
+    }
+    100% {
+        transform: rotate(360deg);
+        zoom: 1;
+    }
+
+}
+
+@keyframes big {
+    0% {
+        width: 150px;
+        height: 200px;
+    }
+    100% {
+        width: 170px;
+        height: 220px;
+    }
 }

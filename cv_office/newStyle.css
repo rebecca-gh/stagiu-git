@@ -4,7 +4,8 @@ main {
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
-    animation: entrance 1s;
+    position: relative;
+    animation: cv_office_entrance 3s;
 }
 
 header {
@@ -170,86 +171,12 @@ footer {
     transition-property: all;
 }
 
-@keyframes entrance {
-    5% {
-        transform: rotate(18deg); 
-        zoom: 0.05;
-    }
-    10% {
-        transform: rotate(36deg);   
-        zoom: 0.1;
-    }
-    15% {
-        transform: rotate(54deg);
-        zoom: 0.15;
-    }
-    20% {
-        transform: rotate(72deg); 
-        zoom: 0.2;   
-    }
-    25% {
-        transform: rotate(90deg);
-        zoom: 0.25;
-    }
-    30% {
-        transform: rotate(108deg);
-        zoom: 0.3;
-    }
-    35% {
-        transform: rotate(126deg);
-        zoom: 0.35;
-    }
-    40% {
-        transform: rotate(144deg);
-        zoom: 0.4;
-    }
-    45% {
-        transform: rotate(162deg);
-        zoom: 0.45;
-    }
-    50% {
-        transform: rotate(180deg);
-        zoom: 0.5;
-    }
-    55% {
-        transform: rotate(198deg);
-        zoom: 0.55;
-    }
-    60% {
-        transform: rotate(216deg);
-        zoom: 0.6;
-    }
-    65% {
-        transform: rotate(234deg);
-        zoom: 0.65;
-    }
-    70% {
-        transform: rotate(252deg);
-        zoom: 0.7;
-    }
-    75% {
-        transform: rotate(270deg);
-        zoom: 0.75;
-    }
-    80% {
-        transform: rotate(288deg);
-        zoom: 0.8;
-    }
-    85% {
-        transform: rotate(306deg);
-        zoom: 0.85;
-    }
-    90% {
-        transform: rotate(324deg);
-        zoom: 0.9;
-    }
-    95% {
-        transform: rotate(342deg);
-        zoom: 0.95;
-    }
-    100% {
-        transform: rotate(360deg);
-        zoom: 1;
-    }
-
+@keyframes cv_office_entrance {
+ 0% {
+top: -500px;
+ }
+ 100% {
+     top: 0;
+ }
 }
+
