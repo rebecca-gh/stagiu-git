@@ -1,0 +1,20 @@
+#body {
+    background-color: #caf5f3;
+}
+main {
+    background-color: #f0f8ff;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+header img {
+width: 150px;
+height: 200px;
+border-radius: 15px 50px;
+}
+
+a img {
+width: 250px;
+height: 150px;
+}
