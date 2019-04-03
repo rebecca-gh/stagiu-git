@@ -4,7 +4,7 @@
 .container-fluid {
     background-color: #f0f8ff;
     max-width: 900px;
-    margin: auto;
+    margin-top: 20px;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     animation: entrance 1s;
@@ -31,9 +31,9 @@ header img {
     font-weight: bold;
     font-size: 18px;
 }
-.personalInfo:before {
-    content: attr(text);
+.personalInfo span {
     border-bottom: 2px solid #53d2d9;
+    display: block;
 }
 .personalDetails {
     margin-top: 20px;
@@ -49,13 +49,14 @@ section {
 a img {
 width: 250px;
 height: 150px;
-transition: border 0.5s;
+
 }
 figure {
     text-align: center;
     color: #000000;
+    transition: border 0.2s;
 }
-a img:hover {
+figure:hover {
     border: 3px outset #ffffff;
 }
 footer a {
