@@ -1,0 +1,182 @@
+main {
+    width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    position: relative;
+    animation: cv_office_entrance 3s;
+}
+
+header {
+    width: 30%;
+    height: 90px;
+    box-sizing: inherit;
+}
+.header_title {
+    height: 50%;
+    color: #f0f8ff;
+    background-color: #53d2d9;
+    box-sizing: inherit;
+    padding: 15px 0 5px 10px;
+}
+.header_info {
+    height: 50%;
+    background-color: #f0f8ff;
+    color: #000000;
+    box-sizing: inherit;
+    text-align: center;
+    font-weight: bold;
+}
+.span_info {
+    display: block;
+    font-style: italic;
+}
+aside {
+    width: 30%;
+    height: 600px;
+    box-sizing: inherit;
+    background-color: #53d2d9;
+    color: #f0f8ff;
+    padding-left: 10px;
+    float: left;
+    margin-bottom: 30px;
+}
+aside > div {
+    height: 20%;
+    box-sizing: inherit;
+    padding: 20px 0 0 10px;
+}
+aside:hover div{
+    transform: scale(1.1);
+    transition: 0.5s;
+    box-shadow: 2px 2px 2px #f0f8ff;
+  }
+.bigSpan {
+    display: block;
+}
+.smallSpan {
+    color: #1f9fa7;
+}
+section {
+    width: 600px;
+    height: 800px;
+    float: right;
+    box-sizing: inherit;
+    padding: 10px;
+    background-color: #f0f8ff;
+}
+.details {
+    margin-bottom: 15px;
+}
+.details:hover {
+    box-shadow: 3px 3px 5px #1f9fa7;
+    transform: scale(1.1);
+    background-color: #53d2d9;
+    transition: 0.5s all;
+
+}
+#details_st {
+    height: 30%;
+}
+#details_nd {
+    height: 50%;
+}
+.left {
+    width: 30%;
+    float: left;
+    clear: both;
+}
+.right {
+    width: 70%;
+    float: right;
+}
+.left > span {
+    display: block;
+}
+.title {
+    height: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #53d2d9;
+    font-weight:bold;
+}
+.skill {
+    width: 20%;
+    height: 28px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.skill > img {
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+}
+label {
+    vertical-align: middle;
+    border: 1px solid #1f9fa7;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.tooltip {
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: absolute;;
+    z-index: 1;
+    background-color: #f0f8ff;
+    color: #000000;
+    visibility: hidden;
+}
+.skill:hover .tooltip {
+    visibility: visible;
+}
+#css:hover::after {
+    content:"I hate CSS, \A I hate CSS, \A I hate CSS... \A It's working! \A I love CSS! 🍾";
+    white-space: pre;
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: absolute;
+    z-index: 1;
+    background-color: #f0f8ff;
+    color: #000000;
+}
+footer {
+    clear: both;
+    
+    color: #f0f8ff;
+    height: 70px;
+}
+.footer_details {
+    width: 33.33%;
+    height: inherit;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #53d2d9;
+}
+.footer_details:hover {
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px #1f9fa7;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+
+@keyframes cv_office_entrance {
+ 0% {
+top: -500px;
+ }
+ 100% {
+     top: 0;
+ }
+}
+
