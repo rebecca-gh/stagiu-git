@@ -95,6 +95,9 @@ hr {
 .experience_item {
     width: 30%;
 }
+.experience_item span {
+    display: block;
+}
 .experience_details {
     width: 70%;
     padding-left: 15px;
