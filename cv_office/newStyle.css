@@ -1,7 +1,14 @@
 main {
     width: 900px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 10% 80% 10%;
+    grid-template-areas: 
+        'header .'
+        'aside section'
+        'footer footer';
+    grid-gap: 0 20px;
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     position: relative;
@@ -9,22 +16,18 @@ main {
 }
 
 header {
-    width: 30%;
-    height: 90px;
-    box-sizing: inherit;
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 .header_title {
-    height: 50%;
     color: #f0f8ff;
     background-color: #53d2d9;
-    box-sizing: inherit;
     padding: 15px 0 5px 10px;
 }
 .header_info {
-    height: 50%;
     background-color: #f0f8ff;
     color: #000000;
-    box-sizing: inherit;
     text-align: center;
     font-weight: bold;
 }
@@ -33,24 +36,20 @@ header {
     font-style: italic;
 }
 aside {
-    width: 30%;
-    height: 600px;
-    box-sizing: inherit;
+    grid-area: aside;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background-color: #53d2d9;
     color: #f0f8ff;
-    padding-left: 10px;
-    float: left;
     margin-bottom: 30px;
 }
 aside > div {
-    height: 20%;
-    box-sizing: inherit;
-    padding: 20px 0 0 10px;
+    padding: 20px;
 }
 aside:hover div{
     transform: scale(1.1);
-    transition: 0.5s;
     box-shadow: 2px 2px 2px #f0f8ff;
+    transition: 0.5s;
   }
 .bigSpan {
     display: block;
@@ -59,15 +58,19 @@ aside:hover div{
     color: #1f9fa7;
 }
 section {
-    width: 600px;
-    height: 800px;
-    float: right;
-    box-sizing: inherit;
+    grid-area: section;
+    display: grid;
+    grid-template-rows: 30% 50% 20%;
+    grid-gap: 10px 0;
     padding: 10px;
     background-color: #f0f8ff;
 }
 .details {
-    margin-bottom: 15px;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+.details p {
+    margin: auto;
 }
 .details:hover {
     box-shadow: 3px 3px 5px #1f9fa7;
@@ -76,22 +79,13 @@ section {
     transition: 0.5s all;
 
 }
-#details_st {
-    height: 30%;
+.multipleRows {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 20px 0;
 }
-#details_nd {
-    height: 50%;
-}
-.left {
-    width: 30%;
-    float: left;
-    clear: both;
-}
-.right {
-    width: 70%;
-    float: right;
-}
-.left > span {
+.multipleRows span {
     display: block;
 }
 .title {
@@ -100,13 +94,17 @@ section {
     border-bottom: 2px solid #53d2d9;
     font-weight:bold;
 }
-.skill {
-    width: 20%;
-    height: 28px;
-    display: inline-block;
-    margin-top: 20px;
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    
 }
-.skill > img {
+.skills div {
+    height: 50%;
+}
+.skills div > img {
     vertical-align: middle;
     width: 20px;
     height: 20px;
@@ -131,7 +129,7 @@ label {
     color: #000000;
     visibility: hidden;
 }
-.skill:hover .tooltip {
+.skills div:hover .tooltip {
     visibility: visible;
 }
 #css:hover::after {
@@ -150,25 +148,49 @@ label {
     color: #000000;
 }
 footer {
-    clear: both;
-    
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
     color: #f0f8ff;
-    height: 70px;
 }
-.footer_details {
-    width: 33.33%;
-    height: inherit;
-    float: left;
+footer div {
+    height: 80%;
     text-align: center;
     padding: 10px;
     box-sizing: border-box;
     background-color: #53d2d9;
 }
-.footer_details:hover {
+footer div:hover {
     border-radius: 10%;
     box-shadow: 5px 5px 10px #1f9fa7;
     transition-duration: 0.5s;
     transition-property: all;
+}
+@media all and (max-width: 768px) {
+    main {
+          max-width: 600px;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: 10% 20% 60% 10%;
+          grid-template-areas: 
+            'header'
+            'aside'
+            'section'
+            'footer';
+    grid-gap: 0 20px;
+    }
+    aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+    aside > div {
+        padding: 0;
+        height: 50%;
+        text-align: center;
+    }
 }
 
 @keyframes cv_office_entrance {
