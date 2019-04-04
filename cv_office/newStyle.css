@@ -31,7 +31,8 @@ header {
     text-align: center;
     font-weight: bold;
 }
-.span_info {
+.header_info::after {
+    content: attr(text);
     display: block;
     font-style: italic;
 }
@@ -46,29 +47,24 @@ aside {
 aside > div {
     padding: 20px;
 }
+aside div::after{
+    content:attr(text);
+    display: block;
+    color: #1f9fa7;
+}
 aside:hover div{
     transform: scale(1.1);
     box-shadow: 2px 2px 2px #f0f8ff;
     transition: 0.5s;
   }
-.bigSpan {
-    display: block;
-}
-.smallSpan {
-    color: #1f9fa7;
-}
 section {
     grid-area: section;
     display: grid;
-    grid-template-rows: 30% 50% 20%;
     grid-gap: 10px 0;
     padding: 10px;
     background-color: #f0f8ff;
 }
-.details {
-    display: grid;
-    grid-template-rows: 10% 90%;
-}
+
 .details p {
     margin: auto;
 }
@@ -82,7 +78,6 @@ section {
 .multipleRows {
     display: grid;
     grid-template-columns: 40% 60%;
-    grid-template-rows: 50% 50%;
     grid-gap: 20px 0;
 }
 .multipleRows span {
@@ -95,15 +90,15 @@ section {
     font-weight:bold;
 }
 .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
     
 }
 .skills div {
-    height: 50%;
+    width: 20%;
+    position: relative;
 }
+
 .skills div > img {
     vertical-align: middle;
     width: 20px;
@@ -129,8 +124,20 @@ label {
     color: #000000;
     visibility: hidden;
 }
-.skills div:hover .tooltip {
-    visibility: visible;
+.skills div:hover::after {
+    content: attr(text);
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: absolute;
+    z-index: 1;
+    background-color: #f0f8ff;
+    color: #000000;
+
 }
 #css:hover::after {
     content:"I hate CSS, \A I hate CSS, \A I hate CSS... \A It's working! \A I love CSS! 🍾";
@@ -172,11 +179,11 @@ footer div:hover {
           max-width: 600px;
           display: grid;
           grid-template-columns: 1fr;
-          grid-template-rows: 10% 20% 60% 10%;
+          
           grid-template-areas: 
             'header'
-            'aside'
             'section'
+            'aside'
             'footer';
     grid-gap: 0 20px;
     }
