@@ -2,7 +2,7 @@ body {
     background-color: #faebd7;
 }
 main {
-    width: 900px;
+    max-width: 900px;
     margin: auto;
     display: grid;
     grid-template-columns: 30% 1fr;
@@ -20,8 +20,6 @@ main {
 
 header {
     grid-area: header;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
 }
 .header_title {
     color: #f0f8ff;
@@ -41,8 +39,6 @@ header {
 }
 aside {
     grid-area: aside;
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     background-color: #53d2d9;
     color: #f0f8ff;
     margin-bottom: 30px;
@@ -62,14 +58,8 @@ aside:hover div{
   }
 section {
     grid-area: section;
-    display: grid;
-    grid-gap: 10px 0;
     padding: 10px;
     background-color: #f0f8ff;
-}
-
-.details p {
-    margin: auto;
 }
 .details:hover {
     box-shadow: 3px 3px 5px #1f9fa7;
@@ -77,6 +67,15 @@ section {
     background-color: #53d2d9;
     transition: 0.5s all;
 
+}
+.about {
+    grid-area: about;
+}
+.experience {
+    grid-area: experience;
+}
+.skill {
+    grid-area: skill;
 }
 .multipleRows {
     display: grid;
@@ -142,21 +141,6 @@ label {
     color: #000000;
 
 }
-#css:hover::after {
-    content:"I hate CSS, \A I hate CSS, \A I hate CSS... \A It's working! \A I love CSS! 🍾";
-    white-space: pre;
-    width: 100px;
-    height: auto;
-    padding: 10px;
-    text-align: center;
-    font-size: 16px;
-    border: 1px solid #000000;
-    border-radius: 30%;
-    position: absolute;
-    z-index: 1;
-    background-color: #f0f8ff;
-    color: #000000;
-}
 footer {
     grid-area: footer;
     display: grid;
@@ -177,17 +161,32 @@ footer div:hover {
     transition-duration: 0.5s;
     transition-property: all;
 }
-@media all and (max-width: 768px) {
+
+@media only screen and (max-width: 576px){
+    main {
+        max-width: 500px;
+        grid-template: 
+            "header" 200px
+            "about" 1fr
+            "experience" 1fr
+            "skill" 1fr
+            "footer" 100px;
+        grid-gap: 20px 0;
+    }
+    aside {
+        display: none;
+    }
+}
+@media only screen and (min-width: 577px) and (max-width: 768px) {
     main {
           max-width: 600px;
-          display: grid;
           grid-template-columns: 1fr;
           
           grid-template-areas: 
-            'header'
-            'section'
-            'aside'
-            'footer';
+            "header" 
+            "section" 
+            "aside"
+             "footer";
     grid-gap: 0 20px;
     }
     aside {
