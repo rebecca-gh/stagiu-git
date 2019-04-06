@@ -1,0 +1,16 @@
+.item {
+    width: 30%;
+    float: left;
+}
+.experience >p  {
+    width: 70%;
+    float: right;
+    margin-top: 0;
+}
+.clear {
+    clear: both;
+}
+.skills {
+    width: 20%;
+    float: left;
+}
