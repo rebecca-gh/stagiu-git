@@ -112,20 +112,7 @@ label {
     padding: 5px;
     box-sizing: border-box;
 }
-.tooltip {
-    width: 100px;
-    height: auto;
-    padding: 5px;
-    text-align: center;
-    font-size: 14px;
-    border: 1px solid #000000;
-    border-radius: 30%;
-    position: absolute;;
-    z-index: 1;
-    background-color: #f0f8ff;
-    color: #000000;
-    visibility: hidden;
-}
+
 .skills div:hover::after {
     content: attr(text);
     width: 100px;
