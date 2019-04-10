@@ -1,16 +1,183 @@
-.item {
-    width: 30%;
-    float: left;
+main {
+    margin: auto;
+    max-width: 1200px;
+    position: relative;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "about"
+    "work"
+    "skills"
+    "footer";
+    grid-gap: 0 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    margin: auto;
+    box-sizing: border-box;
+} 
+    
+header {
+    grid-area: header;
+    height: 100px;
+    
+    background-color: #f0f8ff;
+    
+}
+header span:first-child {
+    display: block;
+    height: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+
+}
+header span:last-child {
+    height: 50%;
+    background-color: #53d2d9;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    
+}
+header span:last-child::after {
+    content: attr(text);
+    text-align: center;
+    font-style: italic;
+    display: block;
+}
+.about {
+    grid-area: about;
+
+}
+.work {
+    grid-area: work;
+}
+.skills {
+    grid-area: skills;
+    
+}
+.skills_contain { 
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+section {
+    box-sizing: border-box;
+    padding: 10px;
+    border-right: 3px double #53d2d9;
+    margin-top: 10px;
+    background-color: #f0f8ff;
+}
+section:hover {
+   border: 4px outset #ffffff;
+    transition: 0.5s;
 }
 .experience >p  {
     width: 70%;
     float: right;
     margin-top: 0;
 }
+.item {
+    width: 27%;
+    float: left;
+    margin-right: 3%;
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
 .clear {
     clear: both;
 }
-.skills {
+.skill {
     width: 20%;
     float: left;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.skill:hover::after {
+    content: attr(text);
+    width: 100px;
+    height: auto;
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid #000000;
+    border-radius: 30%;
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    z-index: 1;
+    background-color: #fdfddc;
+    color: #000000;
+}
+#special:hover::after {
+    content: "I hate CSS, \A I hate CSS,'\A' I hate CSS...'\A' It's working! '\A' I love CSS! 🍾";
+}
+.skill > img {
+    width: 20px;
+    height: 20px;
+}
+label {
+    border: 1px solid #1f9fa7;
+    padding: 5px;
+    box-sizing: border-box;
+}
+footer {
+    grid-area: footer;
+    height: 70px;
+    display: flex;
+
+}
+.contact {
+    width: 33.33%;
+    background-color: #53d2d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact > span::after {
+    content: attr(text);
+    
+}
+footer div:hover {
+    border-radius: 10%;
+    box-shadow: 5px 5px 10px #1f9fa7;
+    transition-duration: 0.5s;
+    transition-property: all;
+}
+@media all and (min-width: 768px) {
+    main {
+        grid-template-areas: 
+        "header header header ."
+        "about about about skills"
+        "work work work skills"
+        "footer footer footer footer"
+    }
+    .skills_contain {
+        height: 200px;
+        justify-content: space-between;
+    }
+    .skill {
+        width: auto;
+    }
+}
+@media all and (min-width: 992px){
+    main {
+        grid-template-areas: 
+        "header header header . . . ."
+        "about about about work work work skills"
+        "footer footer footer footer footer footer footer"
+
+    }
+    .skills_contain {
+        height: 200px;
+        justify-content: space-between;
+    }
+    .skill {
+        width: auto;
+    }
 }
