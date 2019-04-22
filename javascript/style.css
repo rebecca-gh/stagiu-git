@@ -1,0 +1,52 @@
+main {
+    max-width: 1200px;
+    margin: auto;
+    
+}
+header {
+    height: 100px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color: lightseagreen;
+    background: radial-gradient(rgba(233, 233, 128, 0.5), rgba(166, 241, 241, 0.5));
+
+}
+section {
+    display: flex;
+    justify-content: space-around;
+
+}
+.special {
+    color: pink;
+}
+.clicked {
+    color: black;
+}
+.btnClicked {
+    background-color: pink;
+    text-transform: uppercase;
+    border: 3px outset white;
+}
+article {
+    width: 300px;
+}
+footer {
+    background: url('media/sectionbg.jpg') no-repeat right;
+    background-size: contain;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer div {
+    width: 150px;
+    text-align: center;
+}
+footer div div, button {
+    margin-top: 10px;
+}
+.result::before {
+    content: attr(text);
+    display: block;
+}
