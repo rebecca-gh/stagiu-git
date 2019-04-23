@@ -12,7 +12,15 @@ header {
     background: radial-gradient(rgba(233, 233, 128, 0.5), rgba(166, 241, 241, 0.5));
 
 }
-section {
+header::before {
+content: "I'm HEADER!";
+
+}
+header.header::before {
+    content: attr(text);
+    font-size: 24px;
+}
+.articles {
     display: flex;
     justify-content: space-around;
 
@@ -31,6 +39,22 @@ section {
 article {
     width: 300px;
 }
+.biggerChanged {
+    content: "I'm bigger";
+    font-size: 24px;
+}
+.gallery {
+    display: flex;
+    justify-content: space-between;
+}
+.favorites img {
+    width: 300px;
+    height: 250px;
+}
+figcaption {
+    text-align: center;
+    font-style: italic;
+}
 footer {
     background: url('media/sectionbg.jpg') no-repeat right;
     background-size: contain;
@@ -46,7 +70,6 @@ footer div {
 footer div div, button {
     margin-top: 10px;
 }
-.result::before {
-    content: attr(text);
-    display: block;
+footer div div:last-child {
+    display: none;
 }

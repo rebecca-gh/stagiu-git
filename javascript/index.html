@@ -8,10 +8,10 @@
     </head>
     <body>
         <main>
-            <header onclick="ttt(this)">I'm HEADER</header>
-            <section>
+            <header text="I'm here" onclick="ttt(this)"></header>
+            <section class='articles'>
                 <article>
-                    <p class='special' onclick=change()>First title</p>
+                    <p class='special bigger' onclick=change()>First title</p>
                     <button onclick=btnChange(this) text="I'm
                         changed!">Change me!</button>
                     <p id='demo'>Lorem Ipsum is simply dummy text of the
@@ -23,7 +23,7 @@
                         survived not only five centuries.</p>
                 </article>
                 <article>
-                    <p>Second title</p>
+                    <p class= 'bigger' id='p'>Second title</p>
                     <button onclick= btnChange(this)>Change me!</button>
                     <p>Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -33,7 +33,7 @@
                         survived not only five centuries.</p>
                 </article>
                 <article>
-                    <p>Third title</p>
+                    <p class= 'bigger'>Third title</p>
                     <button onclick= btnChange(this)>Change me!</button>
                     <p>Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -43,21 +43,49 @@
                         survived not only five centuries.</p>
                 </article>
             </section>
+            <section class= 'favorites'>
+                <p> Pick up your favorites!</p>
+                <div class= 'gallery'>
+
+
+                    <figure>
+                        <img src= 'media/ocean.jpg' alt= 'Ocean'>
+                        <figcaption>Ocean</figcaption>
+                        <input type= 'checkbox' name='myFav'>
+                    </figure>
+
+
+                    <figure>
+                        <img src= 'media/mountain.jpg' alt= 'Mountain'>
+                        <figcaption>Mountain</figcaption>
+                        <input type= 'checkbox' name='myFav'>
+                    </figure>
+
+
+                    <figure>
+                        <img src= 'media/city.jpg' alt= 'City'>
+                        <figcaption>City</figcaption>
+                        <input type= 'checkbox' name='myFav'>
+                    </figure>
+
+                </div>
+                <p>You've chose: </p>
+            </section>
             <footer>
                 <div>
                     <div>phone</div>
-                    <button>Show</button>
-                    <div class='result seen' text= '123 456'></div>
+                    <button onclick= showHide(this,0)>Show</button>
+                    <div>123 456</div>
                 </div>
                 <div>
                     <div>mail</div>
-                    <button>Show</button>
-                    <div class='result seen'>werfcre</div>
+                    <button onclick= showHide(this,1)>Show</button>
+                    <div>my_mail@gmail.com</div>
                 </div>
                 <div>
                     <div>address</div>
-                    <button>Show</button>
-                    <div class='result seen'>ercew</div>
+                    <button onclick= showHide(this,2)>Show</button>
+                    <div>my_address</div>
                 </div>
             </footer>
         </main>
