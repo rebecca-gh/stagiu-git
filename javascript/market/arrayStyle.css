@@ -1,0 +1,26 @@
+main {
+    max-width: 1000px;
+    margin: auto;
+}
+header {
+    height:150px;
+    text-align: center;
+}
+.fruitsMarket {
+    float: left;
+    width: 50%;
+}
+.chosenFruits {
+    float: right;
+    width: 50%;
+}
+.clear {
+    clear: both;
+}
+footer {
+    height: 100px;
+    text-align: center;
+}
+.fruits span {
+    display: block;
+}
