@@ -57,6 +57,41 @@ function create() {
     }
     createTable();
 
+
+    var table2 = document.createElement('table');
+    frag.appendChild(table2);
+    section.appendChild(frag);
+
+    function newTable() {
+
+        var arr = [
+            { id: 1, color: 'green' },
+            { id: 2, color: 'red' }
+        ];
+
+
+        var th = table2.createTHead();
+        var rowTh = th.insertRow();
+        var obj = arr[0];
+        for (key in obj) {
+            let cell = rowTh.insertCell();
+            let text = document.createTextNode(key);
+            cell.appendChild(text);
+        };
+        arr.forEach(item => {
+            let row = table2.insertRow();
+            for (key in item) {
+                let cell = row.insertCell();
+                let text = document.createTextNode(item[key]);
+                cell.appendChild(text);
+            }
+        })
+
+
+    }
+
+    newTable();
+
     // function addStyle(){
 
     // }
