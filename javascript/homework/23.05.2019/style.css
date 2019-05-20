@@ -1,0 +1,46 @@
+body {
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Tangerine', cursive;
+    font-size: 32px;
+}
+header {
+font-size: 38px;
+font-weight: bold;
+text-align: center;
+margin: 20px 0 20px 0;
+}
+form {
+    width: 600px;
+    margin: auto; 
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin-right: 40px;
+    text-align: right;
+    
+}
+input {
+    border: none;
+    border-bottom: 2px solid grey;
+    width: 150px;
+    transition: width 2s;
+    margin-right: 100px;
+    
+}
+input:focus {
+    outline: none;
+    width: 200px; 
+    box-shadow: 4px 2px white;
+}
+.divButtons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+.divResult p {
+height: 14px;
+}
