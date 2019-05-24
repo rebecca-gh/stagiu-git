@@ -20,42 +20,35 @@ function create() {
 
     console.log(frag);
     console.log(section);
+    function addTh() {
+        var obj = products[0];
+        const row = createRow(Object.keys(obj));
+        table.appendChild(row);
 
-    function createTable() {
-        function addTh() {
-            var row = document.createElement('tr');
-            var obj = products[0];
-            for (key in obj) {
-                var cell = document.createElement('td');
-                var text = document.createTextNode(key);
-                console.log(text);
-                cell.appendChild(text);
-                row.appendChild(cell);
-                // cell.setAttribute('style', 'color:red; border: 1px solid black; text-align:center');
-            }
-            table.appendChild(row);
-
-        }
-        function addBody() {
-            products.forEach(item => {
-                var row = document.createElement('tr');
-                for (key in item) {
-                    var cell = document.createElement('td');
-                    var text = document.createTextNode(item[key]);
-                    console.log(text);
-                    cell.appendChild(text);
-                    row.appendChild(cell);
-                }
-                table.appendChild(row);
-
-            })
-
-        }
-
-        addTh();
-        addBody();
     }
-    createTable();
+    function addBody() {
+        products.forEach(item => {
+            item.customField = "test0";
+            const row = createRow(item);
+            table.appendChild(row);
+        })
+    }
+
+    function createRow(item) {
+        var row = document.createElement('tr');
+        for (key in item) {
+            var cell = document.createElement('td');
+            var text = document.createTextNode(item[key]);
+            console.log(text);
+            cell.appendChild(text);
+            row.appendChild(cell);
+            cell.setAttribute('class', 'row');
+        }
+        return row;
+    }
+    addTh();
+    addBody();
+
 
 
     var table2 = document.createElement('table');
