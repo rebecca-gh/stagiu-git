@@ -29,12 +29,14 @@ input {
     width: 150px;
     transition: width 2s;
     margin-right: 100px;
+    background-color: white;
     
 }
 input:focus {
     outline: none;
     width: 200px; 
     box-shadow: 4px 2px white;
+    
 }
 .divButtons {
     display: flex;

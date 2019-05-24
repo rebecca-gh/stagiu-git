@@ -11,6 +11,8 @@
     divBtn.className = 'divButtons';
     divResult.className = 'divResult';
 
+    form.append(divInput);
+    form.append(divBtn);
 
     /**
      * @param  {} id -- id input 
@@ -30,7 +32,7 @@
 
         divInputDetails.append(label, input);
         divInput.append(divInputDetails);
-        form.append(divInput);
+        //form.append(divInput);
     }
 
 
@@ -64,6 +66,7 @@
     createButton('btnSubmit', 'Submit');
     //createButton('btnClear', 'Clear');
     //createButton('btnSome', 'Some');
+    createInput('inputSome', 'Some');
 
 
     console.log(document.getElementById('btnSubmit'));
@@ -79,34 +82,42 @@
     //     this.surname = surname;
     //     this.mail = mail;
     // }
+    // Person.prototype.showName = function () {
+    //     console.log(this.name + ' ' + this.surname);
+    // }
 
     /** 
      * creates object 'person' with prototype ec6
     */
-    // class Person {
-    //     constructor(name, surname, mail) {
-    //         this.name = name;
-    //         this.surname = surname;
-    //         this.mail = mail;
-    //     }
-    // }
+    class Person {
+        constructor(name, surname, mail) {
+            this.name = name;
+            this.surname = surname;
+            this.mail = mail;
+        }
+        showName() { console.log(this.name + ' ' + this.surname) };
+    }
+
 
     function getInputInfo() {
         var inputName = document.getElementById('inputName').value;
         console.log(inputName);
         var inputSurname = document.getElementById('inputSurname').value;
         var inputMail = document.getElementById('inputMail').value;
-        // var person = new Person(inputName, inputSurname, inputMail);
-        // return person;
+
+        var person = new Person(inputName, inputSurname, inputMail);
+        person.showName();
+        return person;
 
 
         //creates object 'person' with object prototype
-        var person = {
-            name: inputName,
-            surname: inputSurname,
-            mail: inputMail
-        }
-        return person;
+        // var person = {
+        //     name: inputName,
+        //     surname: inputSurname,
+        //     mail: inputMail,
+        //     //message: (function () { alert('Welcome, ' + inputName + '!') })()
+        // }
+        // return person;
     }
 
     /**
@@ -123,6 +134,7 @@
             divResult.appendChild(divUser).appendChild(p);
             divResult.appendChild(hr);
         }
+
         //console.log(userDetails);
 
         frag.append(divResult);
